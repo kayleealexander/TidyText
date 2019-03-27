@@ -1,6 +1,6 @@
 ## Workshop: Introduction to Text Analysis with TidyText
 
-This is an introduction into text analysis using primarily the TidyText package for R statistical programming language in the RStudio development environment. This workshop will demonstrate how to import texts into the environment, and perform basic analyses for word usage and sentiment analysis. This workshop uses the **[tidytext](https://www.tidytextmining.com/)** package (as well as others) to analyze and visualize written works, such as novels and song lyrics. 
+This is an introduction into text analysis using primarily the TidyText package for R statistical programming language in the RStudio development environment. This workshop will demonstrate how to import texts into the environment, and perform basic analyses for word usage and sentiment analysis. This workshop uses the [tidytext](https://www.tidytextmining.com/) package (as well as others) to analyze and visualize written works, such as novels and song lyrics. 
 
 [TidyText.Rmd](https://github.com/kayleealexander/TidyText/blob/master/TidyText.Rmd) contains the instructions and code chunks used in the workshop. [Queen.csv](https://github.com/kayleealexander/TidyText/blob/master/Queen.csv) contains the data for the section of the workshop analyzing song lyrics. 
 
