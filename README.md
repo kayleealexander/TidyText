@@ -4,9 +4,7 @@ This is an introduction into text analysis using primarily the TidyText package 
 
 [TidyText.Rmd](https://github.com/kayleealexander/TidyText/blob/master/TidyText.Rmd) contains the instructions and code chunks used in the workshop. [Queen.csv](https://github.com/kayleealexander/TidyText/blob/master/Queen.csv) contains the data for the section of the workshop analyzing song lyrics. 
 
-### Prerequisites
-
-**R Packages:**
+### Prerequisites (R Packages)
 
 1. [dplyr](https://dplyr.tidyverse.org/)
 2. [tidytext](https://cran.r-project.org/web/packages/tidytext/vignettes/tidytext.html)
