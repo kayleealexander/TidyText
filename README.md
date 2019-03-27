@@ -6,7 +6,7 @@ This is an introduction into text analysis using primarily the TidyText package 
 
 ### Prerequisites
 
-R Packages:
+**R Packages:**
 
 1. [dplyr](https://dplyr.tidyverse.org/)
 2. [tidytext](https://cran.r-project.org/web/packages/tidytext/vignettes/tidytext.html)
@@ -18,9 +18,9 @@ R Packages:
 
 ### Author
 
-**Kaylee Alexander** - *initial work* -  [kayleealexander](https://github.com/kayleealexander)
+* **Kaylee Alexander** - *initial work* -  [kayleealexander](https://github.com/kayleealexander)
 
-See also the list of [contributors](https://github.com/kayleealexander/TidyText/graphs/contributors) who participated in this project.
+*See also the list of [contributors](https://github.com/kayleealexander/TidyText/graphs/contributors) who participated in this project.*
 
 ### License
 
