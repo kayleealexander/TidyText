@@ -4,7 +4,7 @@ This is an introduction into text analysis using primarily the TidyText package 
 
 [TidyText.Rmd](https://github.com/kayleealexander/TidyText/blob/master/TidyText.Rmd) contains the instructions and code chunks used in the workshop. [Queen.csv](https://github.com/kayleealexander/TidyText/blob/master/Queen.csv) contains the data for the section of the workshop analyzing song lyrics. 
 
-### Prerequisites (R Packages)
+### R Packages Used
 
 1. [dplyr](https://dplyr.tidyverse.org/)
 2. [tidytext](https://cran.r-project.org/web/packages/tidytext/vignettes/tidytext.html)
@@ -26,4 +26,4 @@ This project is licensed under the [MIT License](https://github.com/kayleealexan
 
 ### Acknowledgments
 
-This workshop was initially developed for the [Rfun](http://rfun.library.duke.edu) workshop series organized by [Data & Visualization Services](https://duke.libcal.com/profile/20463) at Duke University Libraries. It was inspired by Julia Silge and David Robinson's [*Text Mining with R: A Tidy Approach*](https://www.tidytextmining.com/). Visit the GitHub repository for Slige and Robinson's project [here](https://github.com/dgrtwo/tidy-text-mining).
+This workshop was initially developed for the [Rfun](http://rfun.library.duke.edu) workshop series organized by [Data & Visualization Services](https://github.com/data-and-visualization) at Duke University Libraries. It was inspired by Julia Silge and David Robinson's [*Text Mining with R: A Tidy Approach*](https://www.tidytextmining.com/). Visit the GitHub repository for Slige and Robinson's project [here](https://github.com/dgrtwo/tidy-text-mining).
