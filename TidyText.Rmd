@@ -2,7 +2,7 @@
 title: "Introduction to TidyText"
 author: "Kaylee Alexander, Duke University"
 date: '2019-27-03'
-output: html_notebook
+output: github_document
 ---
 
 [RStudio](https://www.rstudio.com/) is a free and open-source integrated development environment (IDE) for R, a programming language for statistical computing and graphics. Working in RStudio, you can easy install R packages, such as the Tidyverse packages for data science. These packages (i.e. dplyr, tidyr, ggplot2, etc.) facilitate data cleaning, analysis and visualization. R can also be used to analyze non-quantitative data, such as texts. In this workshop we will use the **[tidytext](https://www.tidytextmining.com/)** package (as well as others) to analyze and visualize written works, such as novels and song lyrics.
