@@ -1,7 +1,7 @@
 ---
 title: "Introduction to TidyText"
 author: "Kaylee Alexander, Duke University"
-date: '2019-27-03'
+date: '2019-18-04'
 output: github_document
 ---
 
@@ -120,6 +120,8 @@ tidy_frankenstein <- frankenstein %>%
 tidy_frankenstein
 ```
 
+<span style="color:red">**Question 1: Which two (2) words appear most frequently in** ***Frankenstein*****? How many times do they each appear?**</span>
+
 You may have noticed that these top used words don’t tell you too much about the text of Frankenstein. These types of words are called **stop words** (i.e. 'the', 'of', 'to', etc.). We can remove these types of words from our analysis by using the **anti_join** function. Luckily, you won’t have to come up with a whole list of these words yourself; RStudio includes a preloaded package with a data frame, **stop_words**, which contains English stop words compiled from three different lexicons.^[Datasets of stop words for other languages are also available online and can be loaded into R as needed.]
 
 To remove the stop words from the **tidy_frankenstein tibble**, you must first load the **stop_words** data frame: 
@@ -136,6 +138,8 @@ tidy_frankenstein <- tidy_frankenstein %>%
 
 tidy_frankenstein
 ```
+
+<span style="color:red">**Question 2: Now, which two (2) words appear most frequently? How many times do they each appear?**</span>
 
 ###5. Visualizing Mary Shelley's *Frankenstein* (1831)
 
@@ -165,6 +169,8 @@ tidy_frankenstein %>%
 
 This code chunk first calls the dataset that we would like to plot, then filters the dataset to only words that appear more than 50 times in the novel and orders the data according to the number of mentions. Then it calls **ggplot**, and plots **word** on the **x-axis** and **n** (word count) on the **y-axis**. **Geom_col** tells R to use a bar chart with the value of the *y* variable (here, *n*), while the function **fill = “darkred”** colors in the bars.^[Additional codes for colors can be found [here](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf).] **theme_fivethirtyeight** is a pre-set design from the package [ggthemes](https://www.rdocumentation.org/packages/ggthemes/versions/3.5.0), which we then manipulate with the subsequent arguments to adjust the x-axis labels and y-axis labels, change the graph into a horizontal format, and add an appropriate title.
 
+<span style="color:red">**Question 3: How many words appear more than 50 times in** ***Frankenstein*****?**</span>
+
 ###6. Sentiment Lexicons
 One type of textual analysis that can be conducted using R is sentiment analysis in which the emotions of a given text or set of texts is examined. To conduct sentiment analysis, we can use sentiment lexicons. There are three lexicons that can be used for general sentiment analysis on English-language texts: **AFINN** (Finn Årup Nielsen), **bing** (Bing Liu et. Al) and **nrc** (Saif Mohammad and Peter Turney).  These lexicons assign scores for positive and negative sentiment, and also emotions such as joy, anger, fear, etc. 
 
@@ -184,11 +190,15 @@ Now, call the **AFINN** sentiment lexicon.
 get_sentiments("afinn")
 ```
 
+<span style="color:red">**Question 4: What sentiment schore is assigned to "abhorrent"?**</span>
+
 Finally, call the **nrc** lexicon. 
 
 ```{r}
 get_sentiments("nrc")
 ```
+
+<span style="color:red">**Question 5: What sentiments are associated with "abandon"?**</span>
 
 These sentiment lexicons can be joined with your tokenized text(s) to conduct sentiment analysis by using the **inner_join** function from the **dplyr** package.
 
@@ -200,6 +210,8 @@ frankenstein_bing <- tidy_frankenstein %>%
 
 frankenstein_bing
 ```
+
+<span style="color:red">**Question 6: Which three (3) words from the bing lexicon appear most frequently in** ***Frankenstein*****? How many times do they each appear and what sentiment is associated with each one?**</span>
 
 Now, let's use **ggplot2** to produce a horizontal bar chart showing positive and negative word usage in *Frankenstein* usiong the Bing et al. sentiment lexicon. 
 
@@ -231,6 +243,8 @@ tidy_frankenstein %>%
   inner_join(nrc_fear)
 ```
 
+<span style="color:red">**Question 7: How many words associated with fear appear in** ***Frankenstein*****? Which fear word appears most frequently?**</span>
+
 Repeat this process looking at the words associated with **disgust**. 
 
 ```{r}
@@ -245,6 +259,8 @@ nrc_disgust
 tidy_frankenstein %>%
   inner_join(nrc_disgust)
 ```
+
+<span style="color:red">**Question 8: How many words associated with disgust appear in** ***Frankenstein*****? Which disgust word appears most frequently?**</span>
 
 ###7. Comparing Sentiment Lexicons
 In performing sentiment analysis, it might be useful to compare how the use of a given lexicon impacts the analysis. In this section we will explore how the **AFINN**, **bing**, and **nrc** lexicons compare when we examine the narrative arc of *Frankenstein.* First, we will divide the text of *Frankenstein* into its narrative sections^[If you’ve not read Frankenstein, the first parts of the book are organized as a series of written letters, while the remainder of the book is organized into chapters.] using the package **stringr**. We will then use the **tidyr** package to bind the sections to the different sentiment lexicons while manipulating the nrc and bing sentiment lexicons to match the numeric scoring used by the AFINN lexicon.   
@@ -318,6 +334,10 @@ bind_rows(frankenstein_afinn,
   ggtitle("Sentiment in Frankenstein per Chapter", subtitle = "Comparing Lexicons")
 ```
 
+<span style="color:red">**Question 9: Which lexicon gives the final chapter of** ***Frankenstein*** **the most negative score?**</span>
+
+<span style="color:red">**Question 10: Which lexicon is shows the most positive reading of** ***Frankenstein*****?**</span>
+
 Discrepancies among sentiment scores can be due to the ways in which sentiment is categorized in or scored, as well as which words appear or do not appear in each lexicon. To understand these lexicons further, you can count the number of positive and negative words included in each. To look further into **nrc**, run the following:   
 
 ```{r}
@@ -333,6 +353,8 @@ Now, examine **bing**.
 get_sentiments("bing") %>%
   count(sentiment)
 ```
+
+<span style="color:red">**Question 11: Which lexicon includes more negative words? How many negative words does it include**</span>
 
 It is also useful to know how much each word contributes to the overall sentiment of the book. To do this, we can create and plot a tibble joining a given lexicon to the text and creating a variable *n* to indicate the word count. 
 
@@ -426,6 +448,8 @@ tidy_queen <- queen %>%
 tidy_queen
 ```
 
+<span style="color:red">**Question 12: Which two (2) words appear most commonly in Queen lyrics? How often are they used?**</span>
+
 Song lyrics often include words such as “yeah” and “hey,” which you might want to exclude from your analysis.^[Sometimes it is useful to first visualize the most frequently occurring words in your dataset to identify these types of words that you might want to exclude. This is just a selection of some that appeared in this dataset.] You can create a custom stop words list by running the following:
 
 ```{r}
@@ -518,7 +542,13 @@ We now see each song represented by a bar along the *x-axis*, with the *y-axis* 
 *	This pulls up a window showing your data frame. 
 * Sort the songs according to their sentiment score by clicking the arrows in the upper right corner of the cell with the column name sentiment. 
 
-You can now see the songs ordered according to their sum sentiment score. We can use this view to get a better insight into which songs in our visualization are represented in which areas of the graph. We can then add annotations to the graph to show the highest and lowest scoring songs, as well as the more neutral scoring songs to help the viewer understand better what the graph might represent. Annotations need to be added to the graph by specifying the coordinates at which you would like them to appear. You can adjust the coordinates easily by playing with the values in order to get the text situated at the precise point you’d like it to. To add annotations (text and arrows) for the highest, lowest, and most neutral Queen songs to your visualization, run the following: 
+You can now see the songs ordered according to their sum sentiment score. We can use this view to get a better insight into which songs in our visualization are represented in which areas of the graph. We can then add annotations to the graph to show the highest and lowest scoring songs, as well as the more neutral scoring songs to help the viewer understand better what the graph might represent. 
+
+Order the songs according to their sentiment scores by clicking on the arrows in the upper right corner of the column name. 
+
+<span style="color:red">**Question 13: Which song received a sentiment score of twelve (12)?**</span>
+
+Annotations need to be added to the graph by specifying the coordinates at which you would like them to appear. You can adjust the coordinates easily by playing with the values in order to get the text situated at the precise point you’d like it to. To add annotations (text and arrows) for the highest, lowest, and most neutral Queen songs to your visualization, run the following: 
 
 ```{r}
 queen_songs %>%
