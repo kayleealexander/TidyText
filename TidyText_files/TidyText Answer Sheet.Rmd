@@ -1,17 +1,20 @@
 ---
-title: 'Introduction to TidyText: Answer Sheet'
+title: "Introduction to TidyText: Answer Sheet"
 author: "Kaylee Alexander, Duke University"
-date: '2019-18-04'
+date: "2019-18-04"
 output: html_document
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 **Question 1:** Which two (2) words appear most frequently in *Frankenstein*? How many times do they each appear? 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red">**"the" (4248) & "and" (2993)**</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red">**"the" (4248) and "and" (2993)**</span>
 
 **Question 2:** Now, which two (2) words appear most frequently? How many times do they each appear? 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red">**"life" (115) & "father" (112)**</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red">**"life" (115) and "father" (112)**</span>
 
 **Question 3:** How many words appear more than 50 times in *Frankenstein*? 
 
@@ -27,7 +30,7 @@ output: html_document
 
 **Question 6:** Which three (3) words from the bing lexicon appear most frequently in *Frankenstein*? How many times do they each appear and what sentiment is associated with each one? 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red">**"death" (negative, 80); "miserable" (negative, 65); & "love" (positive, 59) **</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red">**"the" (4248) and "and" (2993)"death" (negative, 80); "miserable" (negative, 65); "love" (positive, 59) **</span>
 
 **Question 7:** How many words associated with fear appear in *Frankenstein*? Which fear word appears most frequently? 
 
@@ -51,7 +54,7 @@ output: html_document
 
 **Question 12:** Which two (2) words appear most commonly in Queen lyrics? How often are they used? 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red">**"love" (469) & "yeah" (354)**</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red">**"love" (469) and "yeah" (354)**</span>
 
 **Question 13:** Which song received a sentiment score of twelve (12)? 
 
