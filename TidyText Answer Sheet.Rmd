@@ -2,7 +2,7 @@
 title: 'Introduction to TidyText: Answer Sheet'
 author: "Kaylee Alexander, Duke University"
 date: '2019-18-04'
-output: html_document
+output: html_notebook
 ---
 
 **Question 1:** Which two (2) words appear most frequently in *Frankenstein*? How many times do they each appear? 
